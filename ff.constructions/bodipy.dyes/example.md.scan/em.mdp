@@ -1,0 +1,30 @@
+;
+;	User spoel (236)
+;	Wed Nov  3 17:12:44 1993
+;	Input file
+;
+constraints         =  h-bonds
+integrator          =  steep 
+nsteps              =  100000
+;
+;	Energy minimizing stuff
+;
+emtol               =  10
+emstep              =  0.01
+nstcomm             =  1
+comm_mode           =  linear
+ns_type             =  grid
+nstlist             =  1
+;
+rlist               =  1.15    ;
+coulombtype         =  cut-off
+rcoulomb            =  1.15    ;
+vdwtype             =  switch
+rvdw                =  1.15
+rvdw_switch         =  1.0
+pbc                 =  xyz
+;
+nstxout             =  1
+nstvout             =  500
+nstlog              =  500
+nstenergy           =  500
