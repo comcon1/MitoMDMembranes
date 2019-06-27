@@ -1,0 +1,48 @@
+#include "./charmm36-mar2019.ff/forcefield.itp"
+#include "./charmm36-mar2019.ff/tip3p.itp"
+#include "./charmm36-mar2019.ff/ions.itp"
+#include "./toppar/PLPC.itp"
+#include "./toppar/SLPE.itp"
+#include "./toppar/POPC.itp"
+#include "./toppar/TLX1.itp"
+#include "./toppar/TLX2.itp"
+#include "./toppar/TLX4.itp"
+#include "./toppar/TLX5.itp"
+#include "./toppar/TLX6.itp"
+#include "./toppar/TLX7.itp"
+#include "./toppar/TLX8.itp"
+#include "./toppar/mitoperox.itp"
+
+[ system ]
+
+Membrane is composed of oxidized cardiolipids CP9 with short bodipy in water
+
+[ molecules ]
+; Compound	#mols
+PLPC  	           7
+SLPE  	          21
+POPC  	           7
+TLX6               1 
+TLX1               1
+TLX6               1
+TLX1               1
+TLX5               1
+TLX2               1
+TLX2               1
+TLX5               1
+PLPC  	           7
+SLPE  	          21
+POPC  	           7
+TLX6               1 
+TLX1               1
+TLX6               1
+TLX1               1
+TLX5               1
+TLX2               1
+TLX2               1
+TLX5               1
+MitoPerOx          1
+
+SOL         6276
+NA               59
+CL               28

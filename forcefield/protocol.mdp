@@ -1,0 +1,58 @@
+title			= MEMBRANE
+define          	= 
+integrator      	= sd
+dt              	= 0.002
+nsteps          	= 20000000 
+; OUTPUT CONTROL OPTIONS =
+; Output frequency for coords (x), velocities (v) and forces (f) =
+nstxout                  = 10000
+nstvout                  = 0 
+nstfout                  = 0
+; Output frequency for energies to log file and energy file =
+nstlog                   = 500
+nstenergy                = 500
+; Output frequency and precision for xtc file =
+nstxtcout                = 1000
+xtc_precision            = 1000
+
+cutoff-scheme           = verlet
+nstlist         	= 10
+optimize_fft		= yes
+rlist           	= 1.1
+coulombtype     	= pme
+rcoulomb        	= 1.1
+;cutoff-scheme   	= group
+vdw-type        	= switch
+rvdw_switch     	= 0.8
+rvdw            	= 1.1
+;
+tcoupl          	=  berendsen ;Nose-Hoover
+tc-grps         	= MEMB    Water_and_ions
+tau-t           	= 0.1     0.1
+ref-t           	= 303.315  303.315
+;
+pcoupl          	= berendsen ;Parrinello-Rahman
+pcoupltype		= semiisotropic
+tau-p           	= 0.4 
+compressibility 	= 4.5e-5  4.5e-5
+ref-p           	= 1.0     1.0
+;
+constraints     	= all-bonds
+constraint_algorithm	= LINCS
+lincs-order             = 6
+;
+nstcomm			= 5
+comm-mode		= linear
+comm-grps		= MEMB  Water_and_ions
+;
+; GENERATE VELOCITIES FOR STARTUP RUN =
+gen_vel                  = no
+gen_temp                 = 303.315
+gen_seed                 = 4568
+;
+; Non-equilibrium MD
+acc-grps                 = 3PP
+accelerate               = 0.0 0.0 0.5
+;freezegrps               = 3PP
+;freezedim                = N N Y
+

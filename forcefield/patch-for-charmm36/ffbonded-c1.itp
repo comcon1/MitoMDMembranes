@@ -1,0 +1,131 @@
+; addition interactions for hyperoxides
+; ----------------------------------------
+
+[ bondtypes ]
+;      i        j  func           b0           kb
+     CHX     CEL1     1   0.15040000    510000.00 ;peroxide
+    CTL2      CHX     1   0.15370000    186188.00 ;peroxide from QQ and CTL2-CTL2    
+    HOHX     OHX2     1   0.09600000    462308.00 ;peroxide from AMBER and QQ
+     CHX     OHX1     1   0.14450000    518816.00 ; peroxide CO freom QQ and for ester from curent forcefield
+     CHX     HCHX     1   0.10980000    258571.20 ;peroxide CH from QQ and kb fro CTL2-HAL2    
+    OHX1     OHX2     1   0.14570000    294440.00 ;peroxide from AMBER and QQ
+
+[ angletypes ]
+;      i        j        k  func       theta0       ktheta          ub0          kub
+    HOHX     OHX2     OHX1     5    99.527000   414.600000   0.00000000         0.00
+     CHX     OHX1     OHX2     5   108.310000   414.600000   0.00000000         0.00
+    CEL1     CEL1     CEL1     5   123.717000   401.664000   0.00000000         0.00
+    HCHX      CHX     OHX1     5   108.151000   418.400000   0.00000000         0.00
+    HAL2     CTL2      CHX     5   110.100000   221.752000   0.21790000     18853.10 ; =HAL2-CTL2-CTL2
+    HAL3     CTL3      CHX     5   110.100000   221.752000   0.21790000     18853.10 ; =HAL2-CTL2-CTL2
+    OHX1      CHX     CTL2     5   104.254000   633.457600   0.00000000         0.00
+    HCHX      CHX     CTL2     5   110.097000   221.752000   0.21790000     18853.10
+     CHX     CTL2     CTL2     5   124.411000   488.272800   0.25610000      9338.69
+     CHX     CTL2     CTL3     5   124.411000   488.272800   0.25610000      9338.69
+    CTL2      CHX     CEL1     5   104.400000   267.776000   0.00000000         0.00 ; force CEL1-CTL2-CTL | value 631*
+    HCHX      CHX     CEL1     5   111.500000   376.560000   0.00000000         0.00 ; =CEL1-CTL2-HAL2 | value same as 631*
+     CHX     CEL1     HEL1     5   116.000000   334.720000   0.00000000         0.00 ; = HEL1-CEL1-CTL2 | value same as 631*
+     CHX     CEL1     CEL1     5   123.500000   401.664000   0.00000000         0.00 ; =CEL1-CEL1-CTL2 | value same as 631*
+    CEL1      CHX     OHX1     5   108.100000   376.560000   0.00000000         0.00 ; force from OC301-CC311-CC311 | value 631*
+
+[ dihedraltypes ]
+;      i        j        k        l  func         phi0         kphi  mult
+     CHX     OHX1     OHX2     HOHX     9   113.865000     0.836800     1
+    CTL2      CHX     OHX1     OHX2     9  -159.413000     0.836800     1 ; where is it from?
+    CEL1      CHX     OHX1     OHX2     9  -159.413000     0.836800     1 ; where is it from?
+    CTL2     CTL2      CHX     OHX1     9   121.807000     0.836800     1
+    CEL1     CEL1      CHX     CTL2     9   180.000000     3.807440     1 ; # -start-
+    CEL1     CEL1      CHX     CTL2     9   180.000000     0.753120     2 ; # cel1-cel1-ctl2-ctl2
+    CEL1     CEL1      CHX     CTL2     9   180.000000     0.711280     3 ; # -end-
+    CEL1     CEL1      CHX     HCHX     9   180.000000     1.255200     3 ; cel1-cel1-ctl2-hal2
+    CEL1     CEL1      CHX     OHX1     9   180.000000     7.949600     1 ; # -start-
+    CEL1     CEL1      CHX     OHX1     9   180.000000     1.673600     2 ; # cg2d1-cg2d1-cg321-og311
+    CEL1     CEL1      CHX     OHX1     9   180.000000     2.510400     3 ; # -end-
+    HEL1     CEL1      CHX     OHX1     9     0.000000     0.836800     3 ; hga4-cg2d1-cg321-og311
+       X     CTL2      CHX        X     9     0.000000     0.794960     3 ; =X-CTL2-CTL2-X
+    OHX2     OHX1      CHX     HCHX     9   180.000000     0.000000     6 ; like O-C-C-H
+    HEL1     CEL1      CHX     CTL2     9     0.000000     0.502080     3 ; like hel1-cel1-ctl2-ctl2
+    HEL1     CEL1      CHX     HCHX     9     0.000000     0.000000     3 ; like hel1-cel1-ctl2-hal2
+
+
+; addition interactions for BODIPY
+; ----------------------------------------
+[bondtypes]
+     NR2       BL     1   0.15732000    151789.50 ; for bodipy
+      BL       FL     1   0.13890000    129383.66 ; for bodipy
+    CPH1     CPH2     1   0.14100000    171544.00 ; for bodipy
+    CTL2     CPH1     1   0.15000000     95813.00 ; for bodipy
+    CPH2     CPH2     1   0.13600000    171544.00 ; for bodipy
+    CPH2      CPT     1   0.14000000    150624.00 ; for bodipy
+     NR2      CPT     1   0.13855000    112968.00 ; for bodipy
+     NR2       CA     1   0.13750000    112968.00 ; for bodipy
+     PP3       CA     1   0.18          177500.0
+     PP3      CT2     1   0.18          177500.0
+      CA   CG2DC2     1   0.14500000    305432.00 ; copy of  CG2DC2-CG2R61
+
+[angletypes]
+     NR2       CA      CT2     5   120.0       1338.88       0.00000000         0.00
+     NR2       BL      NR2     5   106.0        784.10       2.41620000         7.70
+     NR2       BL       FL     5   113.6        263.69       2.56100000         5.33
+      FL       BL       FL     5   113.6        396.49       2.56100000        36.87
+      CA      PP3       CA     5   109.5        608          0                  0
+      CA      PP3      CT2     5   109.5        608          0                  0
+     PP3      CT2      CT3     5   115.2        509          0                  0
+     PP3      CT2      CT2     5   115.2        509          0                  0
+     PP3       CA       CA     5   115.2        509          0                  0
+     PP3      CT2      HA2     5   110.1        390          0                  0
+  CG2DC1   CG2DC2   CG2R61     5   122.0        242.672      0.00000000         0.00 ; CG2DC3-CG2DC2-CG2R61
+  CG2DC1   CG2DC2       CA     5   122.0        242.672      0.00000000         0.00 ; CG2DC3-CG2DC2-CG2R61
+  CG2DC2       CA      NR2     5   124.0        383.2544     0.00000000         0.00 ; CG321-CG2R51-NG2R51
+      CA       CA   CG2DC2     5   130.0        383.2544     0.00000000         0.00 ; CG321-CG2R51-CG2R51
+      CA      CT2      CT2     5   107.5        433.4624     0.00000000         0.00 ; CG2R61-CG321-CG321
+      CA   CG2DC2     HGA4     5   120.0        267.7760     0.00000000         0.00 ; CG2R61-CG2DC2-HGA4
+     NR2       CA       CA     5   108.5       1087.840000   0.00000000         0.00
+      CA      NR2       CA     5   108.3       1087.840000   0.00000000         0.00
+      CA      NR2       BL     5   125.0        123.687408   2.41620000         5.02
+     CPT      NR2       BL     5   125.0        123.687408   2.41620000         5.02
+
+[dihedraltypes]
+      CA      PP3      CT2      CT2     9     0.0          0.5665       3
+     CT2      PP3       CA       CA     9     0.0          0.5665       3
+      CA      PP3       CA       CA     9     0.0          0.5665       3
+      CA      PP3      CT2      HA2     9     0.0          0.4635       3
+     PP3       CA       CA       HP     9   180.000000    17.572800     2 ; OH1-CA-CA-HP
+     PP3      CT2      CT2      HA2     9     0.0          0.2325       3
+     PP3       CA       CA       CA     9   180.0         12.552000     2 ; =CA-CA-CA-CT3
+
+  CG2DC1   CG2DC2   CG2R61   CG2R61     9   180.000000     3.138000     2 ; CG2DC3-CG2DC1-CG2R61-CG2R61
+  CG2DC1   CG2DC2   CG2R61   CG2R61     9     0.000000     0.794960     4 ;
+
+  CG2R61   CG2DC2   CG2DC1     HGA4     9   180.000000    14.644000     2 ; CG2R61-CG2DC1-CG2DC3-HGA5
+      CA   CG2DC2   CG2DC1     HGA4     9   180.000000    14.644000     2 ; CG2R61-CG2DC1-CG2DC3-HGA5
+  CG2R61   CG2DC2   CG2DC1   CG2DC1     9   180.000000     2.343040     1 ; CG2DC2-CG2DC1-CG2DC1-CG2DC2
+  CG2R61   CG2DC2   CG2DC1   CG2DC1     9   180.000000    29.288000     2
+      CA   CG2DC2   CG2DC1   CG2DC1     9   180.000000     2.343040     1 ; CG2DC2-CG2DC1-CG2DC1-CG2DC2
+      CA   CG2DC2   CG2DC1   CG2DC1     9   180.000000    29.288000     2
+     NR2       CA   CG2DC2   CG2DC1     9     0.000000     1.338880     3 ; NG2RC0-CG2R51-CG321-CG321
+; ^ THIS ONE IS UNDER THE QUESTION
+      CA       CA   CG2DC2   CG2DC1     9   180.000000     3.138000     2 ; CG2DC3-CG2DC1-CG2R61-CG2R61
+      CA       CA   CG2DC2   CG2DC1     9     0.000000     0.794960     4 ;
+
+      BL      NR2       CA   CG2DC2     9     180.0000     4.189816     2 ; copy BL-NR2-CPT-CA
+      CA      NR2       CA   CG2DC2     9     180.0000     4.189816     2 ; copy BL-NR2-CPT-CA
+; ^ THESE TWO ARE TOO SMALL
+      HP       CA       CA   CG2DC2     9     180.0000    17.572800     2 ; HP-CA-CA-CT2
+      CA       CA       CA   CG2DC2     9     180.0000    12.970400     2 ; CT2-CA-CA-CA
+     NR2       CA   CG2DC2     HGA4     9   180.000000     2.510400     2 ; HGA4-CG2DC1-CG2R61-CG2R61
+      CA       CA   CG2DC2     HGA4     9   180.000000     2.510400     2 ; HGA4-CG2DC1-CG2R61-CG2R61
+     NR2       CA       CA       CA     9     180.0000    58.576000     2
+     NR2       CA       CA       HP     9     180.0000    12.552000     2
+     CT2       CA      NR2       CA     9     180.0000    12.552000     2
+      CA       CA      NR2       CA     9     180.0000    58.576000     2
+     CPT      NR2       BL       FL     9     180.0000     6.323823     2
+      BL      NR2      CPT       CA     9     180.0000     4.189816     2
+    CPH2      CPT      NR2       BL     9     180.0000     4.189816     2
+      CA       CA      NR2       BL     9     180.0000     4.189816     2
+      CA      NR2       BL       FL     9     180.0000     6.323823     2
+     NR2       BL      NR2       CA     9     180.0000    25.942013     2
+     NR2       BL      NR2      CPT     9     180.0000    25.942013     2
+     CT2       CA      NR2       BL     9     180.0000    34.258425     2
+
+

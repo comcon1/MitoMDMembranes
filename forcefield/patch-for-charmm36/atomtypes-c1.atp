@@ -1,0 +1,14 @@
+; additional atomtypes for hydroperoxides
+; ----------------------------------------
+  OHX1     15.99940 ; O1 in >CH-O-OH  
+  OHX2     15.99940 ; O2 in >CH-O-OH
+  HCHX      1.00800 ; H(C) in >CH-O-OH
+  HOHX      1.00800 ; H(O) in >CH-O-OH
+   CHX     12.01100 ; C in >CH-O-OH
+
+; additional atomtypes for BODIPY
+; ----------------------------------------
+    BL     10.81000 ; B ! Boron (for BODIPY-PC)
+    FL     18.99800 ; F ! Fluorine (for BODIPY-PC)
+   PP3     30.97400 ; Phosphorus in Phosphonium
+
