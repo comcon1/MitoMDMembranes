@@ -1,0 +1,81 @@
+; addition interactions for BODIPY
+; ----------------------------------------
+[bondtypes]
+     NR2       BL     1   0.15732000    151789.50 ; for bodipy
+      BL       FL     1   0.13890000    129383.66 ; for bodipy
+    CPH1     CPH2     1   0.14100000    171544.00 ; for bodipy
+    CTL2     CPH1     1   0.15000000     95813.00 ; for bodipy
+    CPH2     CPH2     1   0.13600000    171544.00 ; for bodipy
+    CPH2      CPT     1   0.14000000    150624.00 ; for bodipy
+     NR2      CPT     1   0.13855000    112968.00 ; for bodipy
+     NR2       CA     1   0.13750000    112968.00 ; for bodipy
+     PP3       CA     1   0.18          177500.0
+     PP3      CT2     1   0.18          177500.0
+      CA   CG2DC2     1   0.14500000    305432.00 ; copy of  CG2DC2-CG2R61
+
+[angletypes]
+     NR2       CA      CT2     5   120.0       1338.88       0.00000000         0.00
+     NR2       BL      NR2     5   106.0        784.10       2.41620000         7.70
+     NR2       BL       FL     5   113.6        263.69       2.56100000         5.33
+      FL       BL       FL     5   113.6        396.49       2.56100000        36.87
+      CA      PP3       CA     5   109.5        608          0                  0
+      CA      PP3      CT2     5   109.5        608          0                  0
+     PP3      CT2      CT3     5   115.2        509          0                  0
+     PP3      CT2      CT2     5   115.2        509          0                  0
+     PP3       CA       CA     5   115.2        509          0                  0
+     PP3      CT2      HA2     5   110.1        390          0                  0
+  CG2DC1   CG2DC2   CG2R61     5   122.0        242.672      0.00000000         0.00 ; CG2DC3-CG2DC2-CG2R61
+  CG2DC1   CG2DC2       CA     5   122.0        242.672      0.00000000         0.00 ; CG2DC3-CG2DC2-CG2R61
+  CG2DC2       CA      NR2     5   124.0        383.2544     0.00000000         0.00 ; CG321-CG2R51-NG2R51
+      CA       CA   CG2DC2     5   130.0        383.2544     0.00000000         0.00 ; CG321-CG2R51-CG2R51
+      CA      CT2      CT2     5   107.5        433.4624     0.00000000         0.00 ; CG2R61-CG321-CG321
+      CA   CG2DC2     HGA4     5   120.0        267.7760     0.00000000         0.00 ; CG2R61-CG2DC2-HGA4
+     NR2       CA       CA     5   108.5       1087.840000   0.00000000         0.00
+      CA      NR2       CA     5   108.3       1087.840000   0.00000000         0.00
+      CA      NR2       BL     5   125.0        123.687408   2.41620000         5.02
+     CPT      NR2       BL     5   125.0        123.687408   2.41620000         5.02
+
+[dihedraltypes]
+      CA      PP3      CT2      CT2     9     0.0          0.5665       3
+     CT2      PP3       CA       CA     9     0.0          0.5665       3
+      CA      PP3       CA       CA     9     0.0          0.5665       3
+      CA      PP3      CT2      HA2     9     0.0          0.4635       3
+     PP3       CA       CA       HP     9   180.000000    17.572800     2 ; OH1-CA-CA-HP
+     PP3      CT2      CT2      HA2     9     0.0          0.2325       3
+     PP3       CA       CA       CA     9   180.0         12.552000     2 ; =CA-CA-CA-CT3
+
+  CG2DC1   CG2DC2   CG2R61   CG2R61     9   180.000000     3.138000     2 ; CG2DC3-CG2DC1-CG2R61-CG2R61
+  CG2DC1   CG2DC2   CG2R61   CG2R61     9     0.000000     0.794960     4 ;
+
+  CG2R61   CG2DC2   CG2DC1     HGA4     9   180.000000    14.644000     2 ; CG2R61-CG2DC1-CG2DC3-HGA5
+      CA   CG2DC2   CG2DC1     HGA4     9   180.000000    14.644000     2 ; CG2R61-CG2DC1-CG2DC3-HGA5
+  CG2R61   CG2DC2   CG2DC1   CG2DC1     9   180.000000     2.343040     1 ; CG2DC2-CG2DC1-CG2DC1-CG2DC2
+  CG2R61   CG2DC2   CG2DC1   CG2DC1     9   180.000000    29.288000     2
+      CA   CG2DC2   CG2DC1   CG2DC1     9   180.000000     2.343040     1 ; CG2DC2-CG2DC1-CG2DC1-CG2DC2
+      CA   CG2DC2   CG2DC1   CG2DC1     9   180.000000    29.288000     2
+     NR2       CA   CG2DC2   CG2DC1     9     0.000000     1.338880     3 ; NG2RC0-CG2R51-CG321-CG321
+; ^ THIS ONE IS UNDER THE QUESTION
+      CA       CA   CG2DC2   CG2DC1     9   180.000000     3.138000     2 ; CG2DC3-CG2DC1-CG2R61-CG2R61
+      CA       CA   CG2DC2   CG2DC1     9     0.000000     0.794960     4 ;
+
+      BL      NR2       CA   CG2DC2     9     180.0000     4.189816     2 ; copy BL-NR2-CPT-CA
+      CA      NR2       CA   CG2DC2     9     180.0000     4.189816     2 ; copy BL-NR2-CPT-CA
+; ^ THESE TWO ARE TOO SMALL
+      HP       CA       CA   CG2DC2     9     180.0000    17.572800     2 ; HP-CA-CA-CT2
+      CA       CA       CA   CG2DC2     9     180.0000    12.970400     2 ; CT2-CA-CA-CA
+     NR2       CA   CG2DC2     HGA4     9   180.000000     2.510400     2 ; HGA4-CG2DC1-CG2R61-CG2R61
+      CA       CA   CG2DC2     HGA4     9   180.000000     2.510400     2 ; HGA4-CG2DC1-CG2R61-CG2R61
+     NR2       CA       CA       CA     9     180.0000    58.576000     2
+     NR2       CA       CA       HP     9     180.0000    12.552000     2
+     CT2       CA      NR2       CA     9     180.0000    12.552000     2
+      CA       CA      NR2       CA     9     180.0000    58.576000     2
+     CPT      NR2       BL       FL     9     180.0000     6.323823     2
+      BL      NR2      CPT       CA     9     180.0000     4.189816     2
+    CPH2      CPT      NR2       BL     9     180.0000     4.189816     2
+      CA       CA      NR2       BL     9     180.0000     4.189816     2
+      CA      NR2       BL       FL     9     180.0000     6.323823     2
+     NR2       BL      NR2       CA     9     180.0000    25.942013     2
+     NR2       BL      NR2      CPT     9     180.0000    25.942013     2
+     CT2       CA      NR2       BL     9     180.0000    34.258425     2
+
+

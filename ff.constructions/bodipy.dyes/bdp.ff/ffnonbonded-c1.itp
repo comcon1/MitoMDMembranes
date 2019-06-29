@@ -1,0 +1,12 @@
+; additional VdW types for hyperoxides
+; ----------------------------------------
+
+[ atomtypes ]
+;type atnum         mass   charge ptype           sigma  epsilon
+
+; additional VdW types for BODIPY
+; ----------------------------------------
+
+  PP3     15   30.97400     0.680  A  0.374000000000  0.83700 
+   FL     9    18.99800     0.000  A  0.290432982110  0.439320
+   BL     5    10.81000     0.000  A  0.356359487260  1.882800
