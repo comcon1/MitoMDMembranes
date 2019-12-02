@@ -1,25 +1,14 @@
+; Topology of monohydroperoxide of tetralinoleoyl cardiolipid
+; See hyperox.rtp for TLX1-8 naming.
 ;
-;	File 'TLX4.top' was generated
-;	By user: unknown (1000)
-;	On host: tenarra-1
-;	At date: Sun Oct 15 13:20:24 2017
-
-;
-;	This is a standalone topology file
-;
-;	Created by:
-;	                    :-) GROMACS - gmx pdb2gmx, 2016.3 (-:
-;	
-;	Executable:   /usr/local/gromacs/bin/gmx
-;	Data prefix:  /usr/local/gromacs
-;	Working dir:  /home/tenarra/membr/charmm-gui/gromacs/topologies
-;	Command line:
-;	  gmx pdb2gmx -f tlx4_m.pdb -p TLX4.top -o tlx4_m.gro
-;	Force field was read from current directory or a relative path - path added.
-;
+; Please cite the following paper
+;   K. G. Lyamzaev, N. V. Sumbatyan, A. M. Nesterenko, E. G. Kholina, V. Natalia, S. Heinz-Jürgen, 
+;   A. Y. Mulkidjanian, and B. V. Chernyak, “Mitoclox: A novel mitochondria-targeted fluorescent probe for tracing lipid peroxidation,” 
+;   Oxidative Medicine and Cellular Longevity, vol. 2019, p. 9710208, 2019.
+;   http://dx.doi.org/10.1155/2019/9710208
 
 ; Include forcefield parameters
-;#include "./charmm36-nov2016.ff/forcefield.itp"
+; do not forget to include "./charmm36-nov2016.ff/forcefield.itp" in your head top file
 
 [ moleculetype ]
 ; Name            nrexcl

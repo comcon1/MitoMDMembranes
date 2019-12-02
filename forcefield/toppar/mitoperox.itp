@@ -1,22 +1,13 @@
+; Topology of MitoPerOx
 ;
-;	File 'ass.top' was generated
-;	By user: tenarra (1002)
-;	On host: atuan
-;	At date: Fri Jul 28 15:31:41 2017
-;
-;	This is a standalone topology file
-;
-;	Created by:
-;	GROMACS:      gmx pdb2gmx, VERSION 5.0.2
-;	Executable:   /usr/bin/gmx
-;	Library dir:  /usr/share/gromacs/top
-;	Command line:
-;	  pdb2gmx -f assembly01.pdb -o ass.pdb -p ass.top
-;	Force field was read from current directory or a relative path - path added.
-;
+; Please cite the following paper
+;   K. G. Lyamzaev, N. V. Sumbatyan, A. M. Nesterenko, E. G. Kholina, V. Natalia, S. Heinz-Jürgen, 
+;   A. Y. Mulkidjanian, and B. V. Chernyak, “Mitoclox: A novel mitochondria-targeted fluorescent probe for tracing lipid peroxidation,” 
+;   Oxidative Medicine and Cellular Longevity, vol. 2019, p. 9710208, 2019.
+;   http://dx.doi.org/10.1155/2019/9710208
 
 ; Include forcefield parameters
-;#include "./charmm36-nov2016.ff/forcefield.itp"
+; do not forget to include "./charmm36-nov2016.ff/forcefield.itp" in your head top file
 
 [ moleculetype ]
 ; Name            nrexcl
