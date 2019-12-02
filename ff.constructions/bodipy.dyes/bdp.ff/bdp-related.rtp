@@ -1,0 +1,366 @@
+
+[ bondedtypes ] 
+; Col 1: Type of bond 
+; Col 2: Type of angles 
+; Col 3: Type of proper dihedrals 
+; Col 4: Type of improper dihedrals 
+; Col 5: Generate all dihedrals if 1, only heavy atoms of 0. 
+; Col 6: Number of excluded neighbors for nonbonded interactions 
+; Col 7: Generate 1,4 interactions between pairs of hydrogens if 1 
+; Col 8: Remove propers over the same bond as an improper if it is 1 
+; bonds  angles  dihedrals  impropers all_dihedrals nrexcl HH14 RemoveDih 
+     1       5          9        2        1           3      1     0 
+
+
+[ BDP ]
+;-0.13
+ [ atoms ]
+  C5   CA     -0.09   0
+  H5   HP      0.16   0
+  B    BL      0.47   3
+  F1   FL     -0.35   3
+  F2   FL     -0.35   3
+  NR   NR2    -0.08   4
+  CR1  CA      0.07   5
+  CR2  CA     -0.13   6
+  HR21 HP      0.11   6
+  CR3  CA     -0.16   7
+  HR31 HP      0.14   7
+  CR4  CA      0.00   8
+  NL   NR2    -0.08   9
+  CL1  CA      0.07  10
+  CL2  CA     -0.20  11
+  HL21 HP      0.14  11
+  CL3  CA     -0.16  12
+  HL31 HP      0.14  12
+  CL4  CA      0.00  13
+  CL5  CT2     0.06  14
+  HL51 HA2     0.06  14
+  HL52 HA2     0.06  14
+  CL6  CT2    -0.11  15
+  HL61 HA2     0.05  15
+  HL62 HA2     0.05  15
+  C    C       0.51  16 
+  O    O      -0.51  16
+  N    NH1    -0.40  17
+  H    H      +0.40  17
+
+ [ bonds ]
+  NL    B
+  NR    B
+  B     F1
+  B     F2
+  CR1   CR2
+  CR2   HR21
+  CR2   CR3
+  CR3   HR31
+  CR3   CR4
+  CR4   NR
+  CR1   NR
+  C5    CL4
+  C5    H5
+  CR4   C5
+  CL4   CL3
+  CL3   HL31
+  CL3   CL2
+  CL2   HL21
+  CL2   CL1
+  CL1   NL
+  CL4   NL
+  CL1   CL5
+  CL5   HL51
+  CL5   HL52
+  CL5   CL6
+  CL6   HL61
+  CL6   HL62
+  CL6   C
+  C     O
+  C     N
+  N     H
+  N    +C2
+  -C10  CR1
+
+[ impropers ]
+  N    C    +C2   H
+  C    CL6   N    O
+
+[ 3PP]
+
+ [ atoms ]
+  P      PP3     0.05    7         
+  C1A     CA     0.07    6         
+  C2A     CA    -0.08    1         
+  H2A     HP     0.11    1         
+  C3A     CA    -0.12    2         
+  H3A     HP     0.14    2         
+  C4A     CA    -0.04    3         
+  H4A     HP     0.13    3         
+  C5A     CA    -0.12    4         
+  H5A     HP     0.14    4         
+  C6A     CA    -0.08    5         
+  H6A     HP     0.11    5         
+  C1B     CA     0.07    8         
+  C2B     CA    -0.08    9         
+;0.3 
+  H2B     HP     0.11    9         
+  C3B     CA    -0.12   10         
+  H3B     HP     0.14   10         
+  C4B     CA    -0.04   11         
+  H4B     HP     0.13   11         
+;-0.04
+  C5B     CA    -0.12   12         
+  H5B     HP     0.14   12         
+  C6B     CA    -0.08   13         
+  H6B     HP     0.11   13         
+  C1C     CA     0.07   19         
+  C2C     CA    -0.08   20         
+  H2C     HP     0.11   20         
+;0.15
+  C3C     CA    -0.12   21         
+  H3C     HP     0.14   21         
+  C4C     CA    -0.04   22         
+  H4C     HP     0.13   22         
+  C5C     CA    -0.12   23         
+  H5C     HP     0.14   23         
+  C6C     CA    -0.08   24         
+  H6C     HP     0.11   24         
+;0.16 
+  C1     CT2    -0.03   15         
+  H11    HA2     0.09   16         
+  H12    HA2     0.09   17         
+  C2     CT2    -0.10   18         
+  H21    HA2     0.06   18         
+  H22    HA2     0.06   18         
+;0.17
+ [ bonds ]
+  C2A    C3A  
+  C2A    C1A  
+  C3A    C4A  
+  C4A    C5A  
+  C5A    C6A  
+  C6A    C1A  
+  C1B    C2B  
+  C1B    C6B  
+  C2B    C3B  
+  C3B    C4B  
+  C4B    C5B  
+  C5B    C6B  
+  C1C    C2C  
+  C1C    C6C  
+  C2C    C3C  
+  C3C    C4C  
+  C4C    C5C  
+  C5C    C6C  
+  C2A    H2A  
+  C3A    H3A  
+  C4A    H4A  
+  C5A    H5A  
+  C6A    H6A  
+  C2B    H2B  
+  C3B    H3B  
+  C4B    H4B  
+  C5B    H5B  
+  C6B    H6B  
+  C2C    H2C  
+  C3C    H3C  
+  C4C    H4C  
+  C5C    H5C  
+  C6C    H6C  
+  C1A    P    
+  P      C1C  
+  P      C1B  
+  P      C1   
+  C1     C2   
+  C1     H11  
+  C1     H12  
+  C2     H21  
+  C2     H22  
+  -N     C2
+
+[ BTL ]
+;+0.13 
+ [ atoms ]
+  C1    CG2R61  -0.08  1
+  H1    HGR61    0.09  1
+  C2    CG2R61  -0.15  2
+  H2    HGR61    0.12  2 
+  C3    CG2R61  -0.09  3
+  H3    HGR61    0.11  3
+  C4    CG2R61  -0.15  4
+  H4    HGR61    0.12  4
+  C5    CG2R61  -0.08  5
+  H5    HGR61    0.09  5
+  C6    CG2R61   0.02  6
+  C7    CG2DC2  -0.08  7
+  H7    HGA4     0.11  7
+  C8    CG2DC1  -0.10  8
+  H8    HGA4     0.13  8
+  C9    CG2DC1  -0.13  9
+  H9    HGA4     0.13  9
+  C10   CG2DC2  -0.08 10 
+  H10   HGA4     0.15 10 
+
+ [ bonds ]
+  C1    H1
+  C1    C2
+  C2    H2
+  C2    C3
+  C3    H3
+  C3    C4
+  C4    H4
+  C4    C5
+  C5    H5
+  C5    C6
+  C6    C1
+  C6    C7
+  C7    H7
+  C7    C8
+  C8    H8
+  C8    C9
+  C9    H9
+  C9    C10
+  C10  +CR1
+  C10   H10
+
+[ dihedrals ]
+
+; 10 in sum
+C1  C6   C7   C8    180.0  4.0  2
+C5  C6   C7   C8    180.0  4.0  2
+C1  C6   C7   H7    180.0  1.0  2
+C5  C6   C7   H7    180.0  1.0  2
+                              
+; 14 in sum                   
+; and 2 asymmetry             
+H10 C10 +CR1 +NR    180.0  1.0  2
+H10 C10 +CR1 +CR2   180.0  1.0  2
+C9  C10 +CR1 +NR    180.0  6.0  2
+                              
+C9  C10 +CR1 +CR2   180.0  6.0  2
+C9  C10 +CR1 +CR2   180.0  2.0  1
+                              
+; 23 in sum                   
+C10 C9   C8   C7    180.0 21.0  2
+C10 C9   C8   C7    180.0  2.0  1
+
+H9  C9   C8   C7    180.0  1.0  2 
+C10 C9   C8   H8    180.0  1.0  2 
+
+[ BDL ]
+;-0.13
+ [ atoms ]
+  C5   CA     -0.09   0
+  H5   HP      0.16   0
+  B    BL      0.47   3
+  F1   FL     -0.35   3
+  F2   FL     -0.35   3
+  NR   NR2    -0.08   4
+  CR1  CA      0.07   5
+  CR2  CA     -0.13   6
+  HR21 HP      0.11   6
+  CR3  CA     -0.16   7
+  HR31 HP      0.14   7
+  CR4  CA      0.00   8
+  NL   NR2    -0.08   9
+  CL1  CA      0.07  10
+  CL2  CA     -0.20  11
+  HL21 HP      0.14  11
+  CL3  CA     -0.16  12
+  HL31 HP      0.14  12
+  CL4  CA      0.00  13
+  CL5  CT2     0.06  14
+  HL51 HA2     0.06  14
+  HL52 HA2     0.06  14
+  CL6  CT2    -0.11  15
+  HL61 HA2     0.05  15
+  HL62 HA2     0.05  15
+  CL7  C       0.51  16 
+  OL7  O      -0.51  16
+  N1   NH1    -0.40  17
+  HN1  H      +0.40  17
+  CL8  CT2    -0.10  15
+  HL81 HA2     0.05  15
+  HL82 HA2     0.05  15
+  CL9  CT2    -0.10  15
+  HL91 HA2     0.05  15
+  HL92 HA2     0.05  15
+  CR9  CT2    -0.10  15
+  HR91 HA2     0.05  15
+  HR92 HA2     0.05  15
+  CR8  CT2    -0.10  15
+  HR81 HA2     0.05  15
+  HR82 HA2     0.05  15
+  N2   NH1    -0.40  17
+  HN2  H      +0.40  17
+  CR7  C       0.51  16 
+  OR7  O      -0.51  16
+  CR6  CT2    -0.10  15
+  HR61 HA2     0.05  15
+  HR62 HA2     0.05  15
+  CR5  CT2    -0.10  15
+  HR51 HA2     0.05  15
+  HR52 HA2     0.05  15
+
+ [ bonds ]
+  NL    B
+  NR    B
+  B     F1
+  B     F2
+  CR1   CR2
+  CR2   HR21
+  CR2   CR3
+  CR3   HR31
+  CR3   CR4
+  CR4   NR
+  CR1   NR
+  C5    CL4
+  C5    H5
+  CR4   C5
+  CL4   CL3
+  CL3   HL31
+  CL3   CL2
+  CL2   HL21
+  CL2   CL1
+  CL1   NL
+  CL4   NL
+  CL1   CL5
+  CL5   HL51
+  CL5   HL52
+  CL5   CL6
+  CL6   HL61
+  CL6   HL62
+  CL6   CL7
+  CL7   OL7
+  CL7   N1
+  N1    HN1
+  -C10  CR1
+  N1    CL8
+  CL8  HL81
+  CL8  HL82
+  CL8   CL9
+  CL9  HL91
+  CL9  HL92
+  CL9   CR9
+  CR9  HR91
+  CR9  HR92
+  CR9   CR8
+  CR8  HR81
+  CR8  HR82
+  CR8    N2
+  N2    HN2
+  N2    CR7
+  CR7   OR7
+  CR7   CR6
+  CR6  HR61
+  CR6  HR62
+  CR6   CR5
+  CR5  HR51
+  CR5  HR52
+  CR5   +C2 
+
+[ impropers ]
+  N1   CL7  CL8   HN1
+  CL7  CL6   N1   OL7
+  N2   CR7  CR8   HN2
+  CR7  CR6   N2   OR7
+
