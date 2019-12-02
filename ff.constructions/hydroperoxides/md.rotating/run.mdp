@@ -1,0 +1,38 @@
+;
+integrator          =  sd
+;
+dt                  =  0.001     ;
+nsteps              =  1000
+ldseed              =  654211
+;
+constraints         =  h-bonds
+nstcomm             =  1
+comm_mode           =  linear
+ns_type             =  grid
+nstlist             =  20
+;
+cutoff-scheme       =  group
+rlist               =  1.15      ;
+coulombtype         =  cut-off
+rcoulomb            =  1.15      ;
+vdwtype             =  switch
+rvdw                =  1.15
+rvdw_switch         =  1.0
+pbc                 =  xyz
+;
+tcoupl              =  berendsen ;
+tc_grps             =  system
+tau_t               =  0.1
+ref_t               =  10
+;
+pcoupl              =  no
+;
+gen_temp            =  1
+gen_vel             =  yes
+
+;
+nstxout             =  1000
+nstvout             =  0
+nstfout             =  0
+nstenergy           =  1000
+nstlog              =  1000
