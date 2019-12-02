@@ -3,7 +3,7 @@ We put the force field as well as the minimal example for building TPR-file.
 * `toppar` -- included ITP files
      * TLXn -- monohydroperoxide of TLCL. @todo: link to folder with RTP
      * mitoperox -- topology of MitoPerOx (Prime et al., 2012: [doi](https://doi.org/10.1016/j.freeradbiomed.2012.05.033))
-     * mitoperox2 -- topology of MitoCLOx (in press)
+     * mitoclox -- topology of MitoCLOx (Lyamzaev et al., 2019: [doi](http://dx.doi.org/10.1155/2019/9710208))
 
 * `patch-for-charmm36` -- Patch for CHARMM36 folder
    * `ffbonded-c1.itp` -- additional bonded interactions 
